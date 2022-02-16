@@ -4,23 +4,49 @@ public class Ex1_Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        int opc = -1;
+        int opc = 0;
         Ex1_Funcionario funcionario = new Ex1_Funcionario();
 
 
-        System.out.println("Cadastro de funcionário");
-        System.out.print("Digite o nome: ");
-        funcionario.nome = sc.nextLine();
-        System.out.print("Digite o sobrenome: ");
-        funcionario.sobrenome = sc.nextLine();
-        System.out.print("Digite a cidade: ");
-        funcionario.cidade = sc.nextLine();
-        System.out.print("Digite o estado: ");
-        funcionario.estado = sc.nextLine();
-        System.out.print("Horas trabalhadas: ");
-        funcionario.horasTrab = sc.nextInt();
-        System.out.print("Valor por hora: R$");
-        funcionario.valorHora = sc.nextDouble();
+        System.out.println("Escolha uma opção:");
+        System.out.println("1 - Formulário pré-preenchido");
+        System.out.println("2 - Preencher formulário");
+        opc = sc.nextInt();
+
+        while((opc != 1 && opc != 2)){
+            System.out.println("Opção invalida, digite novamente");
+            System.out.println("1 - Formulário pré-preenchido");
+            System.out.println("2 - Preencher formulário");
+            opc = sc.nextInt();
+        }
+
+        switch (opc){
+            case 1:
+                funcionario.nome = "Joseverson";
+                funcionario.sobrenome = "Cardoso";
+                funcionario.cidade = "Itapira";
+                funcionario.estado = "SP";
+                funcionario.horasTrab = 100;
+                funcionario.valorHora = 10;
+                opc=0;
+                break;
+            case 2:
+                System.out.println("Cadastro de funcionário");
+                System.out.print("Digite o nome: ");
+                funcionario.nome = sc.nextLine();
+                System.out.print("Digite o sobrenome: ");
+                funcionario.sobrenome = sc.nextLine();
+                System.out.print("Digite a cidade: ");
+                funcionario.cidade = sc.nextLine();
+                System.out.print("Digite o estado: ");
+                funcionario.estado = sc.nextLine();
+                System.out.print("Horas trabalhadas: ");
+                funcionario.horasTrab = sc.nextInt();
+                System.out.print("Valor por hora: R$");
+                funcionario.valorHora = sc.nextDouble();
+                opc=0;
+                break;
+        }
 
         System.out.println();
         funcionario.fichaCompleta();
@@ -36,11 +62,11 @@ public class Ex1_Main {
             switch (opc){
                 case 1:
                     System.out.println("Digite o total de horas a ser adicionado:");
-                    funcionario.horasTrab += sc.nextInt();
+                    funcionario.adicionarHoras(sc.nextInt());
                     break;
                 case 2:
                     System.out.println("Digite o novo valor por hora: ");
-                    funcionario.valorHora = sc.nextDouble();
+                    funcionario.novoValorHora(sc.nextDouble());
                     break;
                 case 3:
                     funcionario.salarioMes();

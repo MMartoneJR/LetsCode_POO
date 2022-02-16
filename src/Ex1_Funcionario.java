@@ -23,15 +23,16 @@ public class Ex1_Funcionario {
 
     void adicionarHoras(int horas){
         this.horasTrab += horas;
+        System.out.println("Total de horas: "+this.horasTrab);
     }
 
     void novoValorHora(double novoValorHora){
         this.valorHora = novoValorHora;
-        System.out.println("Novo valor a ser recebido ao final do mês: "+ this.valorHora);
+        System.out.println("Novo valor por hora: R$"+ this.valorHora);
     }
 
     void salarioMes(){
-        System.out.println("Salário do mês: R$"+ (this.horasTrab*this.valorHora));
+        System.out.println("Total a receber: R$"+ (this.horasTrab*this.valorHora));
     }
 
     void fichaCompleta(){
