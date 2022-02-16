@@ -25,7 +25,7 @@ public class Ex1_Main {
         System.out.println();
         funcionario.fichaCompleta();
 
-        while(opc!=0){
+        while(opc!=4){
             System.out.println();
             System.out.println("Deseja realizar alguma alteração?");
             System.out.println("1 - adicionar horas trabalhadas");
@@ -46,7 +46,6 @@ public class Ex1_Main {
                     funcionario.salarioMes();
                     break;
                 case 4:
-                    opc = 0;
                     break;
             }
 
