@@ -7,7 +7,7 @@ public class Ex1_Funcionario {
      int horasTrab;
      double valorHora;
 
-    void Funcionario(String nome, String sobrenome, String cidade, String estado, int horasTrab, double valorHora){
+     Ex1_Funcionario(String nome, String sobrenome, String cidade, String estado, int horasTrab, double valorHora){
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.cidade = cidade;
@@ -17,7 +17,9 @@ public class Ex1_Funcionario {
 
     }
 
+
     void printNome(String nomeCompleto){
+
         System.out.println("Nome completo: "+ this.nome +" "+this.sobrenome);
     }
 
@@ -32,6 +34,7 @@ public class Ex1_Funcionario {
     }
 
     void salarioMes(){
+
         System.out.println("Total a receber: R$"+ (this.horasTrab*this.valorHora));
     }
 

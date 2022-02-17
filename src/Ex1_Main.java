@@ -5,7 +5,7 @@ public class Ex1_Main {
 
         Scanner sc = new Scanner(System.in);
         int opc = 0;
-        Ex1_Funcionario funcionario = new Ex1_Funcionario();
+        Ex1_Funcionario funcionario = new Ex1_Funcionario("nome", "sobrenome", "cidade", "estado", 00, 00);
 
 
         System.out.println("Escolha uma opção:");
@@ -74,7 +74,6 @@ public class Ex1_Main {
                 case 4:
                     break;
             }
-
         }
     }
 }
