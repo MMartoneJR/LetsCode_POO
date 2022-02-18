@@ -1,21 +1,23 @@
-public class Ex3_Veiculo {
+package Metodos;
 
-    String modelo;
-    String marca;
-    int ano;
-    int velocidade;
-    int acelerar;
-    int velocidadeMax;
-    String cor;
-    double fipe;
+public class Veiculo {
 
-    void caracteristicas(){
+    public String modelo;
+    public String marca;
+    public int ano;
+    public int velocidade;
+    public int acelerar;
+    public int velocidadeMax;
+    public String cor;
+    public double fipe;
+
+    public void caracteristicas(){
         System.out.println("Marca do veículo: "+this.marca);
         System.out.println("Modelo do veículo: "+this.modelo);
         System.out.println("Ano do veiculo: ");
     }
 
-    void acelerar(int acelerar){
+    public void acelerar(int acelerar){
         if((this.velocidade + acelerar)>this.velocidadeMax){
             System.out.println("Velocidade acima do valor permitido para o veículo");
         }
@@ -28,7 +30,7 @@ public class Ex3_Veiculo {
         }
     }
 
-    void freiar(){
+    public void freiar(){
         System.out.println("Freiando o carro!");
         for (int i = this.velocidade; i>=0; i-=10){
             System.out.println("Velocidade atual: "+i+"km/h");

@@ -1,11 +1,17 @@
+package Mains;
+
+import Metodos.Funcionario;
+
 import java.util.Scanner;
 
-public class Ex1_Main {
+public class Funcionario_main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         int opc = 0;
-        Ex1_Funcionario funcionario = new Ex1_Funcionario("nome", "sobrenome", "cidade", "estado", 00, 00);
+        Funcionario funcionario = new Funcionario("nome", "sobrenome",
+                                                    "cidade", "estado",
+                                                00, 00);
 
         System.out.println("Escolha uma opção:");
         System.out.println("1 - Formulário pré-preenchido");

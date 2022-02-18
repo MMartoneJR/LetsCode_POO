@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Exercícios_15-02/Exercícios_15-02.iml" filepath="$PROJECT_DIR$/Exercícios_15-02/Exercícios_15-02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercícios_17-02/Exercícios_17-02.iml" filepath="$PROJECT_DIR$/Exercícios_17-02/Exercícios_17-02.iml" />
       <module fileurl="file://$PROJECT_DIR$/LetsCode_Programação_Orientada_Objetos.iml" filepath="$PROJECT_DIR$/LetsCode_Programação_Orientada_Objetos.iml" />
     </modules>
   </component>
