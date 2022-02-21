@@ -20,10 +20,6 @@ public class Pessoa_main {
         Administrador administrador = new Administrador("Luiza", "Rua da Luiza", "12 1111-2111", 001, 5000, 3, 300);
         Operario operario = new Operario("Robson", "Rua do Robson", "13 1113-1111", 734, 2000, 3, 1000, 20);
         Vendedor vendedor  = new Vendedor("Walderrama", "Rua do Walderrama", "15 1153-1111", 664, 2500, 3, 15000, 30);
-        Pessoa pessoa2 = new Pessoa();
-
-
-
 
         System.out.println("quais dados deseja verificar?");
         System.out.println("1 - Pessoa física;");
