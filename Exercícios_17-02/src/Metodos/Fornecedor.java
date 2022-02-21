@@ -11,6 +11,10 @@ public class Fornecedor extends Pessoa{
         this.valorDivida = valorDivida;
     }
 
+    public Fornecedor(){
+
+    }
+
 
     public double valorCredito(){
         return valorCredito;

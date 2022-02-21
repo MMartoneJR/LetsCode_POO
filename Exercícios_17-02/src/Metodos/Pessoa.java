@@ -10,6 +10,9 @@ public class Pessoa {
         this.endereco = endereco;
         this.telefone = telefone;
     }
+    public Pessoa(){
+
+    }
 
     public void setNome(String nome){
         this.nome = nome;

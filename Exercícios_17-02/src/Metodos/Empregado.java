@@ -14,6 +14,10 @@ public class Empregado extends Pessoa {
         this.imposto = imposto;
     }
 
+    public Empregado(){
+
+    }
+
 
     public int codigoSetor(){
         return codigoSetor;

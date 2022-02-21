@@ -12,6 +12,10 @@ public class Operario extends Empregado{
         this.comissao = comissao;
     }
 
+    public Operario(){
+
+    }
+
     public double valorProducao(){
         return valorProducao;
     }

@@ -10,6 +10,10 @@ public class Administrador extends Empregado{
         this.ajudaDeCusto = ajudaDeCusto;
     }
 
+    public Administrador(){
+
+    }
+
     public double ajudaDeCusto(){
         return ajudaDeCusto;
     }

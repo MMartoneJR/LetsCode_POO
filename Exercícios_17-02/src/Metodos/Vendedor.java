@@ -12,6 +12,10 @@ public class Vendedor extends Empregado{
         this.comissao = comissao;
     }
 
+    public Vendedor(){
+
+    }
+
     public double valorVendas(){
         return valorVendas;
     }
