@@ -1,0 +1,60 @@
+Exercício 01
+
+Nesta atividade vocês deverão criar uma classe Funcionário com os seguintes atributos:
+Nome
+Sobrenome
+Cidade
+Estado
+Horas Trabalhadas
+Valor Por Hora
+
+Este funcionário deverá ter os seguintes métodos:
+Exibir na tela o nome e sobrenome
+Adicionar um construtor default e um construtor com os valores para inicializar o objeto
+Incrementar quantidade de horas no valor atual de horas trabalhadas
+Receber novo valor por hora trabalhada por parâmetro e alterar o valor por hora do funcionário e logo em seguida exibir o novo valor na tela
+Método para calcular o salário que o funcionário receberá no final do mês, e em seguida imprimir o valor.
+A regra para este cálculo é horas trabalhadas * o valor por hora
+Após criar classe, criar uma classe Main realizando os seguintes passos:
+Criar um funcionário recebendo pelo terminal as informações de cada atributo
+Após criar o funcionário com as informações passadas, exibir um MENU com as opções:
+Incrementar quantidade de horas trabalhadas
+Substituir o valor por hora do funcionário
+Calcular o salário do funcionário no final do mês
+
+
+
+Exercício 02
+
+Nesta atividade vocês deverão criar uma classe Livro com os seguintes atributos:
+
+Título
+Nome do Leitor
+Quantidade de páginas total
+Quantidade de páginas lidas
+
+
+Este livro deverá ter os seguintes métodos:
+​​
+Criar um método para verificar o progresso do livro, ele deverá calcular a porcentagem de leitura do livro até o momento e retornar a mensagem: “Você já leu X% do livro”.
+Após criar a classe Livro, vocês devem criar uma classe Main com os seguintes passos:
+Receber informações pela entrada do teclado dos atributos da classe
+Logo em seguida chamar o método para verificar o progresso da leitura do livro
+
+
+Exercício 03
+
+Nesta atividade vocês deverão criar uma classe Veículo com os seguintes atributos:
+
+Modelo
+Marca
+Ano
+Velocidade Máxima
+Cor
+Valor FIPE
+
+Este Veículo deverá ter os seguintes métodos:
+Imprimir “Marca, Modelo, Ano”
+Método para adicionar velocidade recebendo o valor por parâmetro
+Caso o valor da velocidade seja maior do que o máximo permitido, deverá imprimir a seguinte mensagem: “Velocidade acima do valor permitido para o veículo”. Caso o valor seja aceito, deverá exibir a mensagem: “Estou acelerando {quantidade} km/h”
+Método para frear o veículo e exibir a mensagem: “Estou freando o veículo {modelo do veículo}"
