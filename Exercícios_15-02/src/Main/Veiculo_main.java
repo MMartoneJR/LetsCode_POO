@@ -1,4 +1,4 @@
-package Mains;
+package Main;
 import Metodos.Veiculo;
 
 import java.util.Scanner;

@@ -29,7 +29,7 @@ public class Operario extends Empregado{
     }
 
     public double salarioComComissao(){
-        return (salarioBase()+comissao());
+        return (salarioBase+comissao());
     }
 
     public double salarioLiquido(){
@@ -40,13 +40,29 @@ public class Operario extends Empregado{
         System.out.println("Nome: "+ getNome());
         System.out.println("Endereço: "+ getEndereco());
         System.out.println("Telefone: "+getTelefone());
-        System.out.println("Código do setor: "+codigoSetor());
-        System.out.println("Salário bruto: R$"+salarioBase());
+        System.out.println("Código do setor: "+codigoSetor);
+        System.out.println("Salário bruto: R$"+salarioBase);
         System.out.println("Valor produzido: R$"+valorProducao());
         System.out.println("Percentual de comissao: "+comissao()+"%");
         System.out.println("Valor da comissao: R$"+valorComissao());
         System.out.println("imposto sobre o salario: "+imposto()+"%");
         System.out.println("Salário líquido: R$"+salarioLiquido());
+
+    }
+
+    //@Override
+    public String toString(){
+        return "Nome: " + getNome() + '\''+
+                "\nEndereço: " + getEndereco() +'\''+
+                "\nTelefone: " + getTelefone() +'\''+
+                "\nCódigo do setor: "+codigoSetor +'\''+
+                "\nSalário bruto: R$"+salarioBase +'\''+
+                "\nValor produzido: R$"+valorProducao() +'\''+
+                "\nPercentual de comissao: "+comissao()+"%" +'\''+
+                "\nValor da comissao: R$"+valorComissao() +'\''+
+                "\nimposto sobre o salario: "+imposto()+"%" +'\''+
+                "\nSalário líquido: R$"+salarioliquido()
+                ;
 
     }
 }

@@ -1,4 +1,4 @@
-package Mains;
+package Main;
 
 import Metodos.Administrador;
 import Metodos.Empregado;
@@ -8,7 +8,7 @@ import Metodos.Operario;
 import Metodos.Vendedor;
 import java.util.Scanner;
 
-public class Pessoa_main {
+public class PessoaMain {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -38,22 +38,28 @@ public class Pessoa_main {
 
         switch (opc){
             case 1:
-                pessoa.fichaCompleta();
+                //pessoa.fichaCompleta();
+                System.out.println(pessoa.toString());
                 break;
             case 2:
-                fornecedor.fichaCompleta();
+                //fornecedor.fichaCompleta();
+                System.out.println(fornecedor.toString());
                 break;
             case 3:
-                empregado.fichaCompleta();
+                //empregado.fichaCompleta();
+                System.out.println(empregado.toString());
                 break;
             case 4:
-                administrador.fichaCompleta();
+                //administrador.fichaCompleta();
+                System.out.println(administrador.toString());
                 break;
             case 5:
-                operario.fichaCompleta();
+                //operario.fichaCompleta();
+                System.out.println(operario.toString());
                 break;
             case 6:
-                vendedor.fichaCompleta();
+                //vendedor.fichaCompleta();
+                System.out.println(vendedor.toString());
             default:
                 break;
         }

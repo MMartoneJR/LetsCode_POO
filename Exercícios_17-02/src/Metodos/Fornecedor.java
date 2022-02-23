@@ -15,7 +15,6 @@ public class Fornecedor extends Pessoa{
 
     }
 
-
     public double valorCredito(){
         return valorCredito;
     }
@@ -35,6 +34,17 @@ public class Fornecedor extends Pessoa{
         System.out.println("Valor da dívida: R$"+valorDivida());
         System.out.println("Saldo disponível após quitação de dívida: R$"+ObterSaldo());
 
+    }
+
+    //@Override
+    public String toString(){
+        return "Nome: " + getNome() + '\''+
+                "\nEndereço: " + getEndereco() +'\''+
+                "\nTelefone: " + getTelefone()+'\''+
+                "\nValor de credito: R$"+valorCredito()+'\''+
+                "\n Valor da dívida: R$"+valorDivida()+'\''+
+                "\nSaldo disponível após quitação da dívida: R$"+ObterSaldo()
+                ;
     }
 
 }

@@ -1,4 +1,4 @@
-package Mains;
+package Main;
 import Metodos.Livro;
 
 import java.util.Scanner;
