@@ -19,7 +19,7 @@ public class PessoaMain {
         Fornecedor fornecedor = new Fornecedor
                 ("Linx", "Endereço da Linx","11 9999-9999", 200000, 150000);
         Empregado empregado = new Empregado
-                ("Luiz", "Rua do Luiz", "11 1111-1111", 1, 3000, 3);
+                ("Luiz", "Rua do Luiz", "11 1111-1111", 2, 3000, 3);
         Administrador administrador = new Administrador
                 ("Luiza", "Rua da Luiza", "12 1111-2111", 1, 5000, 3, 300);
         Operario operario = new Operario
@@ -46,8 +46,8 @@ public class PessoaMain {
                 System.out.println(fornecedor.toString());
                 break;
             case 3:
-                //empregado.fichaCompleta();
-                System.out.println(empregado.toString());
+                empregado.fichaCompleta();
+                //System.out.println(empregado.toString());
                 break;
             case 4:
                 //administrador.fichaCompleta();

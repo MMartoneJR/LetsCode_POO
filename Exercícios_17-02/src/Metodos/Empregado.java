@@ -40,15 +40,12 @@ public class Empregado extends Pessoa {
         switch (codigoSetor){
             case 1:
                 bonusSalarial = (0.05*salarioBase);
-
                 break;
             case 2:
                 bonusSalarial = (0.10*salarioBase);
-
                 break;
             case 3:
                 bonusSalarial = (0.20*salarioBase);
-
                 break;
             default:
                 bonusSalarial = 0;
@@ -72,6 +69,12 @@ public class Empregado extends Pessoa {
         System.out.println("Endereço: "+ getEndereco());
         System.out.println("Telefone: "+getTelefone());
         System.out.println("Código do setor: "+codigoSetor);
+        if (calcularSalario() == 0){
+            System.out.println("Não elegível a bonificação");
+        }
+        else{
+            System.out.println("Bonus salarial: "+calcularSalario());
+        }
         System.out.println("Salário bruto: R$"+salarioBase);
         System.out.println("imposto sobre o salario: "+imposto()+"%");
         System.out.println("Salário líquido: R$"+salarioliquido());
@@ -85,7 +88,7 @@ public class Empregado extends Pessoa {
                 "\nTelefone: " + getTelefone() +'\''+
                 "\nCódigo do setor: "+codigoSetor +'\''+
                 "\nSalário bruto: R$"+salarioBase +'\''+
-                "\nBonus salarial: R$"+calcularSalario()+'\''+
+                //"\nBonus salarial: R$"+calcularSalario()+'\''+
                 "\nBonus salarial: R$"+calcularSalario()+'\''+
                 "\nimposto sobre o salario: "+imposto()+"%" +'\''+
                 "\nSalário líquido: R$"+salarioliquido()
