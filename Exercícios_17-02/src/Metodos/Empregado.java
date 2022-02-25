@@ -1,22 +1,40 @@
 package Metodos;
 
+import Enums.TipoJornadaEmpregado;
+
 public class Empregado extends Pessoa {
 
     int codigoSetor;
     double salarioBase;
     double imposto;
     double bonusSalarial;
+    protected String tipoJornadaEmpregado;
+    protected double calcularSalario;
+    private final double bonus5 = 0.05d;
+    private final double bonus10 = 0.10d;
+    private final double bonus20 = 0.20d;
 
-    public Empregado(String nome, String endereco, String telefone, int codigoSetor, double salarioBase, double imposto) {
+
+    public Empregado(String nome, String endereco, String telefone, int codigoSetor, double salarioBase, double imposto, String TipoJornadaEmpregado) {
         super(nome, endereco, telefone);
 
         this.codigoSetor = codigoSetor;
         this.salarioBase = salarioBase;
         this.imposto = imposto;
+        this.tipoJornadaEmpregado = TipoJornadaEmpregado;
+        this.calcularSalario = calcularSalario;
     }
 
     public Empregado(){
 
+    }
+
+    public void setTipoJornadaEmpregado(String tipoJornadaEmpregado){
+        this.tipoJornadaEmpregado = tipoJornadaEmpregado;
+    }
+
+    public String getTipoJornadaEmpregado(){
+        return tipoJornadaEmpregado;
     }
 
 
@@ -39,20 +57,19 @@ public class Empregado extends Pessoa {
     public double calcularSalario(){
         switch (codigoSetor){
             case 1:
-                bonusSalarial = (0.05*salarioBase);
+                bonusSalarial = (bonus5*salarioBase);
                 break;
             case 2:
-                bonusSalarial = (0.10*salarioBase);
+                bonusSalarial = (bonus10*salarioBase);
                 break;
             case 3:
-                bonusSalarial = (0.20*salarioBase);
+                bonusSalarial = (bonus20*salarioBase);
                 break;
             default:
                 bonusSalarial = 0;
-
+                break;
         }
         return bonusSalarial;
-
     }
 
     public double imposto(){
@@ -68,14 +85,15 @@ public class Empregado extends Pessoa {
         System.out.println("Nome: "+ getNome());
         System.out.println("Endereço: "+ getEndereco());
         System.out.println("Telefone: "+getTelefone());
-        System.out.println("Código do setor: "+codigoSetor);
+        System.out.println("Código do setor: "+getCodigoSetor());
+        System.out.println("Jornada de trabalho: "+getTipoJornadaEmpregado());
         if (calcularSalario() == 0){
             System.out.println("Não elegível a bonificação");
         }
         else{
             System.out.println("Bonus salarial: "+calcularSalario());
         }
-        System.out.println("Salário bruto: R$"+salarioBase);
+        System.out.println("Salário bruto: R$"+getSalarioBase());
         System.out.println("imposto sobre o salario: "+imposto()+"%");
         System.out.println("Salário líquido: R$"+salarioliquido());
 
@@ -86,13 +104,11 @@ public class Empregado extends Pessoa {
         return "Nome: " + getNome() + '\''+
                 "\nEndereço: " + getEndereco() +'\''+
                 "\nTelefone: " + getTelefone() +'\''+
-                "\nCódigo do setor: "+codigoSetor +'\''+
-                "\nSalário bruto: R$"+salarioBase +'\''+
-                //"\nBonus salarial: R$"+calcularSalario()+'\''+
+                "\nCódigo do setor: "+getCodigoSetor() +'\''+
+                "\nJornada de trabalho: "+
+                "\nSalário bruto: R$"+getSalarioBase() +'\''+
                 "\nBonus salarial: R$"+calcularSalario()+'\''+
                 "\nimposto sobre o salario: "+imposto()+"%" +'\''+
-                "\nSalário líquido: R$"+salarioliquido()
-                ;
-
+                "\nSalário líquido: R$"+salarioliquido();
     }
 }

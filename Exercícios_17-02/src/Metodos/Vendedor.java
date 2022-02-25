@@ -1,12 +1,14 @@
 package Metodos;
 
+import Enums.TipoJornadaEmpregado;
+
 public class Vendedor extends Empregado{
 
     double valorVendas;
     double comissao;
 
-    public Vendedor(String nome, String endereco, String telefone, int codigoSetor, double salarioBase, double imposto, double valorVendas, double comissao) {
-        super(nome, endereco, telefone, codigoSetor, salarioBase, imposto);
+    public Vendedor(String nome, String endereco, String telefone, int codigoSetor, double salarioBase, double imposto, double valorVendas, double comissao, String tipoJornadaEmpregado) {
+        super(nome, endereco, telefone, codigoSetor, salarioBase, imposto, tipoJornadaEmpregado);
 
         this.valorVendas = valorVendas;
         this.comissao = comissao;
@@ -15,6 +17,15 @@ public class Vendedor extends Empregado{
     public Vendedor(){
 
     }
+    public void setCodigoSetor(int codigoSetor){
+        this.codigoSetor = codigoSetor;
+    }
+
+    public int getCodigoSetor(){
+        return codigoSetor;
+    }
+
+    double bonus = calcularSalario();
 
     public double valorVendas(){
         return valorVendas;
@@ -33,7 +44,7 @@ public class Vendedor extends Empregado{
     }
 
     public double salarioLiquido(){
-        return (salarioComComissao() + (imposto()/100)*salarioComComissao());
+        return (bonus+salarioComComissao() + (imposto()/100)*salarioComComissao());
     }
 
 
@@ -44,6 +55,12 @@ public class Vendedor extends Empregado{
         System.out.println("Telefone: "+getTelefone());
         System.out.println("Código do setor: "+codigoSetor);
         System.out.println("Salário bruto: R$"+salarioBase);
+        if (bonus == 0){
+            System.out.println("Não elegível a bonificação");
+        }
+        else{
+            System.out.println("Bonus salarial: "+bonus);
+        }
         System.out.println("Total de vendas: R$"+valorVendas());
         System.out.println("Percentual de comissao: "+comissao()+"%");
         System.out.println("Valor da comissao: R$"+valorComissao());
