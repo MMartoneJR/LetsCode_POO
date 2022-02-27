@@ -4,10 +4,10 @@ import Enums.TipoJornadaEmpregado;
 
 public class Empregado extends Pessoa {
 
-    int codigoSetor;
-    double salarioBase;
-    double imposto;
-    double bonusSalarial;
+    protected int codigoSetor;
+    protected double salarioBase;
+    protected double imposto;
+    protected double bonusSalarial;
     protected String tipoJornadaEmpregado;
     protected double calcularSalario;
     private final double bonus5 = 0.05d;
@@ -37,7 +37,6 @@ public class Empregado extends Pessoa {
         return tipoJornadaEmpregado;
     }
 
-
     public void setSalarioBase(double salarioBase){
         this.salarioBase = salarioBase;
     }
@@ -54,7 +53,7 @@ public class Empregado extends Pessoa {
         return codigoSetor;
     }
 
-    public double calcularSalario(){
+    protected double calcularSalario(){
         switch (codigoSetor){
             case 1:
                 bonusSalarial = (bonus5*salarioBase);
