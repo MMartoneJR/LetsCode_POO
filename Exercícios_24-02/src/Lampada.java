@@ -1,5 +1,7 @@
 public class Lampada implements ILampada{
 
+    //em construção
+
     private boolean statusLampada = true;
     private boolean erro = true;
     private String retorno;
