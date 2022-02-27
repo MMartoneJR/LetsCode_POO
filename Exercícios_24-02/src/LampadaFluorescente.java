@@ -10,7 +10,6 @@ public class LampadaFluorescente extends Lampada{
 
     }
 
-
     public void setStatusLampada(boolean status){
         statusLampada = status;
     }
