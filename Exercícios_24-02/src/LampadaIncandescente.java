@@ -1,4 +1,4 @@
-public class LampadaIncandescente extends Lampada implements ILampada{
+public class LampadaIncandescente extends Lampada{
 
 
     private boolean statusLampada = true;
