@@ -7,7 +7,6 @@ public class Main {
 
         LampadaFluorescente LampadaFluorescente = new LampadaFluorescente();
         LampadaIncandescente LampadaIncandescente = new LampadaIncandescente();
-        Lampada lampada = new Lampada();
 
         boolean ligar = true;
         boolean desligar = true;
