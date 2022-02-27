@@ -13,6 +13,7 @@ public class Main {
         boolean status = true;
         boolean continuar = true;
         int opcLampada = 0, opcStatus = 0, opcContinuar = 0;
+
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Status atual das lâmpadas: ");

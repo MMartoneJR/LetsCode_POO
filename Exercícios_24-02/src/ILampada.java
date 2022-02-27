@@ -1,12 +1,9 @@
 public interface ILampada {
 
-    private String ligar(){
-        return "A lâmpada foi ligada";
-    }
-
-    private String desligar(){
-        return "A lâmpada foi desligada";
-    }
+    String ligar(String tipo);
+    String desligar(String tipo);
+    String jaLigada(String tipo);
+    String jaDesligada(String tipo);
 
 
 }

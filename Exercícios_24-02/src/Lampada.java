@@ -1,55 +1,23 @@
 public class Lampada implements ILampada{
 
-    //em construção
 
-    private boolean statusLampada = true;
-    private boolean erro = true;
-    private String retorno;
-
-    public Lampada(){
-
+    @Override
+    public String ligar(String tipo) {
+        return "A Lâmpada "+tipo+" foi ligada";
     }
 
-
-    public void setStatusLampada(boolean status){
-        statusLampada = status;
+    @Override
+    public String desligar(String tipo) {
+        return "A Lâmpada " +tipo+ " foi desligada";
     }
 
-    private boolean getStatusLampada() {
-        return statusLampada;
+    @Override
+    public String jaLigada(String tipo) {
+        return "A Lâmpada " +tipo+ " já está ligada";
     }
 
-    public void ValidaStatusLampada(boolean status){
-        if (statusLampada == status){
-            if (status == true) {
-                retorno = "A lâmpada já está ligada";
-                erro = true;
-
-            }
-            else {
-                retorno = "A Lâmpada já está desligada";
-                erro = true;
-            }
-        }
-        else{
-            erro = false;
-            setStatusLampada(status);
-        }
+    @Override
+    public String jaDesligada(String tipo) {
+        return "A Lâmpada " +tipo+ " já está desligada";
     }
-
-    public String RetornaStatusLampada(){
-        if (erro == true){
-            retorno = retorno;
-        }
-        else if (statusLampada == true){
-            retorno = "A Lâmpada foi ligada";
-        }
-        else if (statusLampada == false){
-            retorno = "A Lâmpada foi desligada";
-        }
-
-        return retorno;
-
-    }
-
 }

@@ -1,10 +1,10 @@
-public class LampadaFluorescente extends Lampada{
+public class LampadaFluorescente extends Lampada implements ILampada{
 
 
     private boolean statusLampada = true;
     private boolean erro = true;
     private String retorno;
-
+    private String tipo = "fluorescente";
 
     public LampadaFluorescente(){
 
@@ -32,12 +32,12 @@ public class LampadaFluorescente extends Lampada{
     public void ValidaStatusLampada(boolean status){
         if (statusLampada == status){
             if (status == true) {
-                retorno = "A lâmpada Fluorescente já está ligada";
+                retorno = jaLigada(tipo);
                 erro = true;
 
             }
             else {
-                retorno = "A Lâmpada Fluorescente já está desligada";
+                retorno = jaDesligada(tipo);
                 erro = true;
             }
         }
@@ -52,10 +52,10 @@ public class LampadaFluorescente extends Lampada{
             retorno = retorno;
         }
         else if (statusLampada == true){
-            retorno = "A Lâmpada Fluorescente foi ligada";
+            retorno = ligar(tipo);
         }
         else if (statusLampada == false){
-            retorno = "A Lâmpada Fluorescente foi desligada";
+            retorno = desligar(tipo);
         }
 
         return retorno;
