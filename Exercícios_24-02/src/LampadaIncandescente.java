@@ -1,11 +1,6 @@
 public class LampadaIncandescente extends Lampada{
 
-
-    private boolean statusLampada = true;
-    private boolean erro = true;
-    private String retorno;
     private String tipo = "incandescente";
-
 
     public LampadaIncandescente(){
 

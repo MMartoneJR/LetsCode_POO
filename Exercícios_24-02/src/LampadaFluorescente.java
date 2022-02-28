@@ -1,9 +1,5 @@
 public class LampadaFluorescente extends Lampada{
 
-
-    private boolean statusLampada = true;
-    private boolean erro = true;
-    private String retorno;
     private String tipo = "fluorescente";
 
     public LampadaFluorescente(){
@@ -48,7 +44,7 @@ public class LampadaFluorescente extends Lampada{
 
     public String RetornaStatusLampada(){
         if (erro == true){
-            retorno = retorno;
+            statusLampada = statusLampada;
         }
         else if (statusLampada == true){
             retorno = ligar(tipo);

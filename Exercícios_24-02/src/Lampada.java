@@ -1,5 +1,9 @@
 public class Lampada implements ILampada{
 
+     protected boolean statusLampada = false;
+     protected boolean erro = true;
+     protected String retorno;
+
 
     @Override
     public String ligar(String tipo) {
@@ -20,4 +24,5 @@ public class Lampada implements ILampada{
     public String jaDesligada(String tipo) {
         return "A Lâmpada " +tipo+ " já está desligada";
     }
+
 }
