@@ -4,15 +4,4 @@ public class LampadaIncandescente extends Lampada{
 
     }
 
-//    public String StatusAtual(){
-//        if (getStatusLampada() == true) {
-//            retorno = "A lâmpada Incandescente está ligada";
-//        }
-//        else {
-//            retorno = "A Lâmpada Incandescente está desligada";
-//        }
-//        return retorno;
-//    }
-
-
 }

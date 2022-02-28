@@ -65,11 +65,20 @@ public class Lampada implements ILampada{
 
     }
 
+    public void menu(){
+        System.out.println("");
+        System.out.println("Qual lâmpada deseja alterar?");
+        System.out.println("1 - Lampada Fluorescente");
+        System.out.println("2 - Lampada Incandescente");
+        System.out.println("3 - Ambas");
+        System.out.println("0 - Sair");
+    }
+
+
     public void opcoes(){
         System.out.println("1 - Ligar");
         System.out.println("2 - Desligar");
     }
-
 
     @Override
     public String ligar(String tipoLampada) {
