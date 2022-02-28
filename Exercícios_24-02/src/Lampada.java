@@ -65,6 +65,11 @@ public class Lampada implements ILampada{
 
     }
 
+    public void opcoes(){
+        System.out.println("1 - Ligar");
+        System.out.println("2 - Desligar");
+    }
+
 
     @Override
     public String ligar(String tipoLampada) {

@@ -7,6 +7,7 @@ public class Main {
 
         LampadaFluorescente LampadaFluorescente = new LampadaFluorescente();
         LampadaIncandescente LampadaIncandescente = new LampadaIncandescente();
+        Lampada lampada = new Lampada();
 
         LampadaFluorescente.setTipoLampada("fluorescente");
         LampadaIncandescente.setTipoLampada("incandescente");
@@ -26,13 +27,14 @@ public class Main {
             System.out.println("Qual lâmpada deseja alterar?");
             System.out.println("1 - Lampada Fluorescente");
             System.out.println("2 - Lampada Incandescente");
+            System.out.println("3 - Ambas");
+            System.out.println("0 - Sair");
             opcLampada = sc.nextInt();
             switch (opcLampada){
                 case 1:
                     System.out.flush();
                     System.out.println("Lampada Fluorescente:");
-                    System.out.println("1 - Ligar");
-                    System.out.println("2 - Desligar");
+                    lampada.opcoes();
                     opcStatus = sc.nextInt();
                     switch (opcStatus){
                         case 1:
@@ -48,8 +50,7 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("Lampada Incandescente:");
-                    System.out.println("1 - Ligar");
-                    System.out.println("2 - Desligar");
+                    lampada.opcoes();
                     opcStatus = sc.nextInt();
                     switch (opcStatus){
                         case 1:
@@ -62,6 +63,28 @@ public class Main {
                             System.out.println(LampadaIncandescente.RetornaStatusLampada());
                             break;
                     }
+                    break;
+                case 3:
+                    System.out.println("Ambas:");
+                    lampada.opcoes();
+                    opcStatus = sc.nextInt();
+                    switch (opcStatus){
+                        case 1:
+                            LampadaIncandescente.ValidaStatusLampada(true);
+                            LampadaFluorescente.ValidaStatusLampada(true);
+                            System.out.println(LampadaIncandescente.RetornaStatusLampada());
+                            System.out.println(LampadaFluorescente.RetornaStatusLampada());
+                            break;
+
+                        case 2:
+                            LampadaIncandescente.ValidaStatusLampada(false);
+                            LampadaFluorescente.ValidaStatusLampada(false);
+                            System.out.println(LampadaIncandescente.RetornaStatusLampada());
+                            System.out.println(LampadaFluorescente.RetornaStatusLampada());
+                            break;
+                    }
+                    break;
+                case 0:
                     break;
             }
 
