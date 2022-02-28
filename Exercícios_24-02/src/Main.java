@@ -8,9 +8,9 @@ public class Main {
         LampadaFluorescente LampadaFluorescente = new LampadaFluorescente();
         LampadaIncandescente LampadaIncandescente = new LampadaIncandescente();
 
-        boolean ligar = true;
-        boolean desligar = true;
-        boolean status = true;
+        LampadaFluorescente.setTipoLampada("fluorescente");
+        LampadaIncandescente.setTipoLampada("incandescente");
+
         boolean continuar = true;
         int opcLampada = 0, opcStatus = 0, opcContinuar = 0;
 
