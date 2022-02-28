@@ -24,12 +24,24 @@ public class Main {
         do {
             lampada.menu();
             opcLampada = sc.nextInt();
+
+            while(opcLampada < 0 || opcLampada > 3){
+                System.out.println("Opção invalida, escolha novamente:");
+                opcLampada = sc.nextInt();
+            }
+
             switch (opcLampada){
                 case 1:
                     System.out.flush();
                     System.out.println("Lampada Fluorescente:");
                     lampada.opcoes();
                     opcStatus = sc.nextInt();
+
+                    while(opcStatus < 1 || opcStatus > 2){
+                        System.out.println("Opção invalida, escolha novamente:");
+                        opcStatus = sc.nextInt();
+                    }
+
                     switch (opcStatus){
                         case 1:
                             LampadaFluorescente.ValidaStatusLampada(true);
@@ -46,6 +58,12 @@ public class Main {
                     System.out.println("Lampada Incandescente:");
                     lampada.opcoes();
                     opcStatus = sc.nextInt();
+
+                    while(opcStatus < 1 || opcStatus > 2){
+                        System.out.println("Opção invalida, escolha novamente:");
+                        opcStatus = sc.nextInt();
+                    }
+
                     switch (opcStatus){
                         case 1:
                             LampadaIncandescente.ValidaStatusLampada(true);
@@ -62,6 +80,12 @@ public class Main {
                     System.out.println("Ambas:");
                     lampada.opcoes();
                     opcStatus = sc.nextInt();
+
+                    while(opcStatus < 1 || opcStatus > 2){
+                        System.out.println("Opção invalida, escolha novamente:");
+                        opcStatus = sc.nextInt();
+                    }
+
                     switch (opcStatus){
                         case 1:
                             LampadaIncandescente.ValidaStatusLampada(true);
@@ -90,6 +114,12 @@ public class Main {
             System.out.println("1 - Sim");
             System.out.println("2 - Não");
             opcContinuar = sc.nextInt();
+
+            while(opcContinuar < 1 || opcContinuar > 2){
+                System.out.println("Opção invalida, escolha novamente:");
+                opcContinuar = sc.nextInt();
+            }
+
             switch (opcContinuar){
                 case 1:
                     continuar = true;

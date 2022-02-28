@@ -22,7 +22,7 @@ public class Lampada implements ILampada{
         return tipoLampada;
     }
 
-    public String StatusAtual(){
+    protected String StatusAtual(){
         if (getStatusLampada() == true) {
             retorno = "A lâmpada "+ getTipoLampada() +" está ligada";
         }
@@ -32,7 +32,7 @@ public class Lampada implements ILampada{
         return retorno;
     }
 
-    public void ValidaStatusLampada(boolean status){
+    protected void ValidaStatusLampada(boolean status){
         if (getStatusLampada() == status){
             if (status == true) {
                 retorno = jaLigada(getTipoLampada());
@@ -50,7 +50,7 @@ public class Lampada implements ILampada{
         }
     }
 
-    public String RetornaStatusLampada(){
+    protected String RetornaStatusLampada(){
         if (erro == true){
             retorno = retorno;
         }
