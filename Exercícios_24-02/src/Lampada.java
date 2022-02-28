@@ -24,10 +24,10 @@ public class Lampada implements ILampada{
 
     public String StatusAtual(){
         if (getStatusLampada() == true) {
-            retorno = "A lâmpada Fluorescente está ligada";
+            retorno = "A lâmpada "+ getTipoLampada() +" está ligada";
         }
         else {
-            retorno = "A Lâmpada Fluorescente está desligada";
+            retorno = "A Lâmpada "+ getTipoLampada() +" está desligada";
         }
         return retorno;
     }
