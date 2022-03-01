@@ -17,11 +17,11 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Status atual das lâmpadas: ");
-        System.out.println(LampadaFluorescente.StatusAtual());
-        System.out.println(LampadaIncandescente.StatusAtual());
 
         do {
+            System.out.println("\nStatus atual das lâmpadas: ");
+            System.out.println(LampadaFluorescente.StatusAtual());
+            System.out.println(LampadaIncandescente.StatusAtual());
             lampada.menu();
             opcLampada = sc.nextInt();
 
@@ -103,30 +103,9 @@ public class Main {
                     }
                     break;
                 case 0:
-                    break;
-            }
-
-            System.out.println("\nStatus atual das lâmpadas: ");
-            System.out.println(LampadaFluorescente.StatusAtual());
-            System.out.println(LampadaIncandescente.StatusAtual());
-
-            System.out.println("\nRealizar nova ação?");
-            System.out.println("1 - Sim");
-            System.out.println("2 - Não");
-            opcContinuar = sc.nextInt();
-
-            while(opcContinuar < 1 || opcContinuar > 2){
-                System.out.println("Opção invalida, escolha novamente:");
-                opcContinuar = sc.nextInt();
-            }
-
-            switch (opcContinuar){
-                case 1:
-                    continuar = true;
-                    break;
-                case 2:
                     continuar = false;
                     break;
+
             }
         }while(continuar);
     }
