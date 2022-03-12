@@ -5,6 +5,8 @@ import br.com.letscode.pooresumo.entity.Concessionaria;
 import br.com.letscode.pooresumo.entity.Moto;
 import br.com.letscode.pooresumo.enums.TipoCombustaoEnum;
 
+import java.util.concurrent.ConcurrentSkipListSet;
+
 public class POOResumoApplication {
 
     public static void main(String[] args) {
@@ -23,6 +25,9 @@ public class POOResumoApplication {
                 TipoCombustaoEnum.FLEX.getDescricao(), 15000, 250);
         Moto moto3 = new Moto("Honda", "Bizetrica", 2022,
                 TipoCombustaoEnum.ELETRICO.getDescricao(), 22000, 150);
+
+        Carro carroCompra = new Carro("Subaru", "Impreza",2018,
+                TipoCombustaoEnum.GASOLINA.getDescricao(), 200000, 4, true);
 
         Carro[] carros = new Carro[]{carro1, carro2, carro3};
         Moto[] motos = new Moto[]{moto1, moto2, moto3};
